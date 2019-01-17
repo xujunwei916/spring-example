@@ -1,4 +1,4 @@
-package com.test.spring;
+package com.spring.example.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -13,9 +13,11 @@ import java.util.Arrays;
  * 启动api服务的主入口
  */
 @SpringBootApplication
-@ComponentScan({"com.test.spring"})
+@ComponentScan({"com.spring.example.controller",
+        "com.spring.example.service",
+        "com.spring.example.dao",
+        "com.spring.example.beans"})
 @EnableAutoConfiguration
-@EnableScheduling
 public class Application {
 
     public static void main(String[] args) {
